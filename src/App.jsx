@@ -10,6 +10,8 @@ import {
 import { useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { AlertButton } from "./components/atoms/buttons/Alert";
+import PlacementExample from "./components/atoms/Placement";
+
 import "./styles.css";
 
 export default function App() {
@@ -33,13 +35,14 @@ export default function App() {
   return (
     <Stack>
       <Flex justifyContent="center">
-        <Box p={8} border={4}>
+        <Box p={8}>
           <IconButton
             w="50%"
             icon={isDark ? <FaSun /> : <FaMoon />}
             isRound="true"
             onClick={toggleColorMode}
           ></IconButton>
+          <PlacementExample></PlacementExample>
           <Flex>
             <Box
               ml={10}
